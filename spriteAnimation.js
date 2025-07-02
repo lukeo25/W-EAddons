@@ -1,21 +1,20 @@
 // Sprite Animation Plugin for Wick Editor
 (function() {
-    // Sprite animation function
     window.WickSpriteAnimation = function(config) {
-        var clip = config.clip; // Wick Editor Clip object
-        var spriteSheetName = config.spriteSheetName; // Asset name (e.g., 'spritesheet_png')
-        var frameWidth = config.frameWidth || 64; // Width of each frame
-        var frameHeight = config.frameHeight || 64; // Height of each frame
-        var columns = config.columns || 4; // Number of columns
-        var rows = config.rows || 2; // Number of rows
-        var fps = config.fps || 12; // Frames per second
+        var clip = config.clip;
+        var spriteSheetName = config.spriteSheetName;
+        var frameWidth = config.frameWidth || 64;
+        var frameHeight = config.frameHeight || 64;
+        var columns = config.columns || 4;
+        var rows = config.rows || 2;
+        var fps = config.fps || 12;
 
         var totalFrames = columns * rows;
         var frameTime = 1000 / fps;
         var currentFrame = 0;
         var lastUpdate = Date.now();
 
-        // Initialize Clip
+        // Set Clip size
         clip.width = frameWidth;
         clip.height = frameHeight;
 
@@ -37,7 +36,7 @@
             }
         });
 
-        // Optional: Start/stop methods
+        // Control methods
         clip.startAnimation = function() {
             currentFrame = 0;
             lastUpdate = Date.now();
