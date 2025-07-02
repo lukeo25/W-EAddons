@@ -1,0 +1,1 @@
+id="Box1"|@|code="<div style='width: 200px; height: 200px; background: red;'></div>"|@|id="Box2"|@|code="const canvas = document.querySelector('canvas'); if (canvas) { const ctx = canvas.getContext('2d'); ctx.fillStyle = 'blue'; ctx.fillRect(50, 50, 100, 100); }"|@|
